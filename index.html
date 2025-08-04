@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<title>東武東上線沿いの住宅展示場｜Meibo Vision Park</title>
+<link href="css/reset.css" rel="stylesheet">
+<link href="css/common.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet" media="screen">
+</head>
+
+<body>
+<div class="loading" data-opening-animation>
+  <div class="loading__inner">
+    <p class="loading__text" data-opening-animation="text">Meibo Vision Park</p>
+    <figure class="loading__logo" data-opening-animation="logo">
+      <p><img src="images/logo.png" alt="ロゴ"></p>
+    </figure>
+  </div>
+</div>
+<div id="container">
+<header id="main-header">
+    <div id="header_box">
+    <p><a href="index.html"><img src="images/logo.png"></a></p>
+    <h1>株式会社明望不動産</h1>
+    <nav>
+        <ul>
+            <li><a href="modelhouse.html">モデルハウス</a></li>
+            <li><a href="#">イベント</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+            <li><a href="#" class="catalog">カタログ請求</a></li>
+            <li><a href="#" class="reserve">来場予約</a></li>
+        </ul>
+    </nav>
+    </div><!--header_box-->
+</header>
+
+<main style="opacity: 0;">
+    <div class="bg-slider"></div>
+<section class="concept">
+    <h2>Meibo Vision Parkとは？</h2>
+    <p>あなたの"理想の暮らしが、ここから見えてくる。<br>
+Meibo Vision Park（明望ビジョンパーク）は、未来の住まいと暮らしを<br>"見て触れて、体感できる" 明望不動産が提案する体験型の住まいパークです。<br>家族で歩くだけで、「こんな暮らしがしたい」が自然と見えてくる。<br><br>
+ ただの住宅展示場では終わらない。<br><br>
+ それぞれの人生設計に寄り添い、「ビジョン＝将来像」を描く場所。<br> それが、Meibo Vision Parkです。</p>
+</section>
+<section class="content_box">
+    <h3>モデルハウス</h3>
+    <div class="line">
+        <figure>
+        <a href="#"><p><img src="images/model__1.png"></p>
+        <figcaption><span>Model House</span><br>Greenwood</figcaption></a>
+        </figure>
+
+        <figure>
+      <a href="#"><p><img src="images/model__2.png" alt="Model House Hausen"></p>
+      <figcaption><span>Model House</span><br>Hausen</figcaption></a>
+    </figure>
+
+    <figure>
+      <a href="#"><p><img src="images/model__3.png" alt="Model House Noirnest"></p>
+      <figcaption><span>Model House</span><br>Noirnest</figcaption></a>
+    </figure>
+  </div><!--lline-->
+</section><!--content_box-->
+
+<section class="content_box">
+    <h3>イベント</h3>
+    <div class="line">
+        <figure>
+        <a href="#"><p><img src="images/event_1.png"></p>
+        <figcaption><span>Event</span><br>税務相談会</figcaption></a>
+        </figure>
+
+        <figure>
+      <a href="#"><p><img src="images/event_2.png" alt="Model House Hausen"></p>
+      <figcaption><span>Event</span><br>住宅ローンセミナー</figcaption></a>
+    </figure>
+
+    <figure>
+      <a href="#"><p><img src="images/event_3.png" alt="Model House Noirnest"></p>
+      <figcaption><span>Event</span><br>子ども工作ワークショップ</figcaption></a>
+    </figure>
+  </div><!--lline-->
+</section><!--content_box-->
+
+<article>
+    <h3>お知らせ</h3>
+        <p><span>2024年12月27日　1月のイベント情報を更新しました</span></p>
+        <p><span>2025年1月8日　YouTubeチャンネルを開設しました</span></p>
+        <p><span>2025年8月4日　インスタグラムアカウントを開設しました</span></p>
+        <div class="button-wrapper"><a href="#" class="botan">お知らせはこちら</a>
+</div>
+</article>
+</div><!--container-->
+<footer>
+    <div class="f_logo">
+    <p><img src="images/logo.png"></p>
+    <p>株式会社明望不動産</p>
+    <p>〒355-0000 埼玉県川越市品宿4-7-4</p>
+    <p>営業時間：9:30～18:30</p>
+    </div><!--f_logo-->
+    <ul class="retsu">
+        <li><a href="index.html">モデルハウス</a></li>                
+        <li><a href="onsen.html">イベント</a></li>
+        <li><a href="oheya.html">来場予約</a></li>
+        <li><a href="syokuji.html">お問い合わせ</a></li>
+        <li><a href="sisetu.html">アクセス</a></li>
+        <li><a href="access.html">会社概要</a></li>
+    </ul>
+</footer>
+</main>
+</body>
+
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="./js/jquery.bgswitcher.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+<!--オープニングアニメーションのスクリプト-->
+<script>
+  window.addEventListener("load", () => {
+    const loading = document.querySelector("[data-opening-animation]");
+    const text = document.querySelector('[data-opening-animation="text"]');
+    const logo = document.querySelector('[data-opening-animation="logo"]');
+    const main = document.querySelector("main");
+
+    gsap.set(text, { autoAlpha: 0, y: 60 });
+    gsap.set(logo, { autoAlpha: 0 });
+
+    const tl = gsap.timeline({
+      onComplete: () => {
+        gsap.to(main, { autoAlpha: 1, duration: 0.6 });
+      }
+    });
+
+    tl.to(text, { autoAlpha: 1, y: 0, duration: 1.2, ease: "power2.out" })
+      .to(logo, { autoAlpha: 1, duration: 1, ease: "power2.out" }, "-=0.6")
+      .to(loading, { clipPath: "inset(0 0 0 100%)", duration: 1, ease: "power2.inOut" }, "+=0.4");
+  });
+</script>
+<!--ここまで-->
+
+<!--スライダー-->
+<script>
+jQuery(function($) {
+    $('.bg-slider').bgSwitcher({
+        images: ['images/model__2.jpg','images/model__1.jpg','images/model__3.jpg'], 
+		interval: 3500, 
+		loop: true, 	
+		effect: "fade", // エフェクトの種類をfade,blind,clip,slide,drop,hideから指定
+		duration: 1500, // エフェクトの時間を指定します。
+		easing: "swing" // エフェクトのイージングをlinear,swingから指定
+    });
+});
+</script>
+<!--ここまで-->
+
+<!--ナブのチェイス-->
+<script>
+window.addEventListener("scroll", function () {
+  const header = document.getElementById("main-header");
+  if (window.scrollY > 10) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+});
+</script>
+<!--ここまで-->
+
+</html>
