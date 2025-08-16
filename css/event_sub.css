@@ -1,0 +1,201 @@
+@charset "utf-8";
+body{
+	font-family: 'Noto Serif JP', serif,Times,serif,"游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic", "メイリオ", Meiryo, sans-serif;
+	background:rgb(243, 241, 241);
+	padding-top: 130px; 
+    text-align: center;
+}
+img, video {
+	max-width: 100%;
+	height: auto;
+	vertical-align: bottom;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+.container {
+	margin: 0 auto;
+	max-width: 1200px;
+	width:98%;
+}
+#main-header {
+	position: fixed;
+  	top: 0;
+  	left: 0;
+  	width: 100%;
+  	background: #fff;
+  	z-index: 1000;
+  	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+	transition: background 0.3s ease, backdrop-filter 0.3s ease;
+}
+#main-header.scrolled {
+  background: rgba(226, 216, 216, 0.7);
+  backdrop-filter: blur(8px);
+}
+#header_box {
+	padding: 20px 0;
+	display: flex;
+	align-items: center;
+}
+nav {
+	margin-left: auto;
+}
+nav ul {
+	display: flex;
+}
+nav li {
+	margin: 0 15px;
+}
+nav li:hover {
+	color: #5c6866;
+}
+#header_box h1 {
+	font-size: 1.4rem;
+}
+.reserve {
+	background-color: #ea6a31;  
+    color: #fff;                
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.reserve:hover {
+    background-color: #eb946f; 
+}
+.catalog {
+	background-color: #b1d4d0;  
+    color: #fff;                
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.catalog:hover {
+    background-color: #b9cecb; 
+}
+footer {
+	padding:50px 0;
+	border-top: 1px solid;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	background: rgb(46, 46, 71);
+	color: #fff;
+}
+.retsu {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+footer p {
+	margin:10px 20px;
+}
+.retsu li {
+	padding: 10px 0 0 0;
+	width: calc(100%/2); 
+}
+.retsu li:hover {
+	color: rgb(152, 152, 168)
+}
+.f_logo {
+	padding: 10px 0 0 0;
+}
+.loading {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  clip-path: inset(0 0 0 0);
+  transition: clip-path 1s ease;
+}
+
+#container h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+#container h2 {
+  font-size: 1.6rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #2980b9;
+  border-bottom: 2px solid #dce3ea;
+  padding-bottom: 5px;
+}
+#container p {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  margin: 18px 0;
+}
+#container ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  display: inline-block;
+  text-align: left;
+}
+#container li {
+  font-size: 1.05rem;
+  background-color: #eef3f8;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+#container li::before {
+      content: "🧻";
+  margin-right: 8px;
+  font-size: 1.2rem; 
+}
+.highlight {
+      font-weight: bold;
+  color: #e67e22;
+}
+.comment-section {
+  margin-top: 60px;
+}
+
+.comment-box {
+  background-color: #ffffff;
+  border: 1px solid #dde3ea;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+.comment-box {
+display: inline-block;
+  border-right: 2px solid #333;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 4s steps(40, end) forwards, blink 0.75s step-end infinite;
+}
+.comment-name {
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  0%, 100% { border-color: transparent }
+  50% { border-color: #ff0000 }
+}
+.comment-name {
+  font-size: 1.1rem;
+  font-family: 'Noto Sans JP', sans-serif;;
+}

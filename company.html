@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<title>会社概要｜Meibo Vision Park</title>
+<link href="css/reset.css" rel="stylesheet">
+<link href="css/common.css" rel="stylesheet">
+<link href="css/company.css" rel="stylesheet" media="screen">
+</head>
+
+<body>
+<header id="main-header">
+    <div id="header_box">
+    <p><a href="index.html"><img src="images/logo.png"></a></p>
+    <h1>株式会社明望不動産</h1>
+    <div class="triggerBg"></div>
+        <div class="trigger" href="#">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+    <nav class="hNavWrap">
+        <ul class="hNav">
+            <li><a href="modelhouse.html">モデルハウス</a></li>
+            <li><a href="event.html">イベント</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+            <li><a href="#" class="catalog">カタログ請求</a></li>
+            <li><a href="contact.html" class="reserve">来場予約</a></li>
+        </ul>
+    </nav>
+    </div><!--header_box-->
+</header>
+<div id="container">
+<main>
+  <h1>会社概要</h1>
+
+  <table>
+    <tr>
+      <th>会社名</th>
+      <td>株式会社明望不動産</td>
+    </tr>
+    <tr>
+      <th>所在地</th>
+      <td>〒350-0000 埼玉県川越市品宿4-7-4</td>
+    </tr>
+    <tr>
+      <th>代表者</th>
+      <td>代表取締役　山崎 凌</td>
+    </tr>
+    <tr>
+      <th>設立</th>
+      <td>1975年2月19日</td>
+    </tr>
+    <tr>
+      <th>資本金</th>
+      <td>5,000万円</td>
+    </tr>
+    <tr>
+      <th>従業員数</th>
+      <td>245名（2025年8月現在）</td>
+    </tr>
+    <tr>
+      <th>事業内容</th>
+      <td>
+        ・戸建て住宅の設計・施工・販売<br>
+        ・住宅展示場の運営<br>
+        ・リフォーム事業　など
+      </td>
+    </tr>
+    <tr>
+      <th>許認可・登録</th>
+      <td>
+        ・建設業許可番号：埼玉県知事（般-3）第123456号<br>
+        ・宅地建物取引業：埼玉県知事（2）第765432号
+      </td>
+    </tr>
+    <tr>
+      <th>連絡先</th>
+      <td>電話：03-1234-5678　メール：info@example.com</td>
+    </tr>
+    <tr>
+      <th>アクセス</th>
+      <td>JR本川越駅徒歩5分</td>
+    </tr>
+  </table>
+  <div class="button_box anim-box poyopoyo">
+  <a href="company_sub.html" class="botan">会社沿革</a></div>
+
+</div><!--container-->
+<footer>
+    <div class="f_logo">
+    <p><img src="images/logo.png"></p>
+    <p>株式会社明望不動産</p>
+    <p>〒355-0000 埼玉県川越市品宿4-7-4</p>
+    <p>営業時間：9:30～18:30</p>
+    </div><!--f_logo-->
+    <ul class="retsu">
+        <li><a href="modelhouse.html">モデルハウス</a></li>                
+        <li><a href="event.html">イベント</a></li>
+        <li><a href="reservation.html">来場予約</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+        <li><a href="index.html#access">アクセス</a></li>
+        <li><a href="company.html">会社概要</a></li>
+    </ul>
+</footer>
+</main>
+</body>
+
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="./js/jquery.bgswitcher.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+<script src="js/ham-effect.js"></script>
+<!--オープニングアニメーションのスクリプト-->
+<script>
+  window.addEventListener("load", () => {
+    const loading = document.querySelector("[data-opening-animation]");
+    const text = document.querySelector('[data-opening-animation="text"]');
+    const logo = document.querySelector('[data-opening-animation="logo"]');
+    const main = document.querySelector("main");
+
+    gsap.set(text, { autoAlpha: 0, y: 60 });
+    gsap.set(logo, { autoAlpha: 0 });
+
+    const tl = gsap.timeline({
+      onComplete: () => {
+        gsap.to(main, { autoAlpha: 1, duration: 0.6 });
+      }
+    });
+
+    tl.to(text, { autoAlpha: 1, y: 0, duration: 1.2, ease: "power2.out" })
+      .to(logo, { autoAlpha: 1, duration: 1, ease: "power2.out" }, "-=0.6")
+      .to(loading, { clipPath: "inset(0 0 0 100%)", duration: 1, ease: "power2.inOut" }, "+=0.4");
+  });
+</script>
+<!--ここまで-->
+
+<!--スライダー-->
+<script>
+jQuery(function($) {
+    $('.bg-slider').bgSwitcher({
+        images: ['images/bg_2.jpg','images/mainn.jpg','images/main_3.jpeg'], 
+		interval: 4000, 
+		loop: true, 	
+		effect: "fade", // エフェクトの種類をfade,blind,clip,slide,drop,hideから指定
+		duration: 2500, // エフェクトの時間を指定します。
+		easing: "swing" // エフェクトのイージングをlinear,swingから指定
+    });
+});
+</script>
+<!--ここまで-->
+
+<!--ナブのチェイス-->
+<script>
+window.addEventListener("scroll", function () {
+  const header = document.getElementById("main-header");
+  if (window.scrollY > 10) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+});
+</script>
+<!--ここまで-->
+
+</html>

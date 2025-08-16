@@ -5,29 +5,36 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="keywords" content="">
 <meta name="description" content="">
-<title>東武東上線沿いの住宅展示場｜Meibo Vision Park</title>
+<title>モデルハウス｜Meibo Vision Park｜株式会社明望不動産</title>
 <link href="css/reset.css" rel="stylesheet">
 <link href="css/common.css" rel="stylesheet">
 <link href="css/modelhouse.css" rel="stylesheet" media="screen">
 </head>
-<div id="container">
+
 <header id="main-header">
     <div id="header_box">
     <p><a href="index.html"><img src="images/logo.png"></a></p>
     <h1>株式会社明望不動産</h1>
-    <nav>
-        <ul>
+    <div class="triggerBg"></div>
+        <div class="trigger" href="#">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+    <nav class="hNavWrap">
+        <ul class="hNav">
             <li><a href="modelhouse.html">モデルハウス</a></li>
-            <li><a href="#">イベント</a></li>
-            <li><a href="#">お問い合わせ</a></li>
+            <li><a href="event.html">イベント</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
             <li><a href="#" class="catalog">カタログ請求</a></li>
-            <li><a href="#" class="reserve">来場予約</a></li>
+            <li><a href="reservation.html" class="reserve">来場予約</a></li>
         </ul>
     </nav>
     </div><!--header_box-->
 </header>
+<p><img src="images/modelhouse_visual_ja.png"></p>
+<div id="container">
 <main>
-    <p><img src="images/modell_.jpg"></p>
     <h2>Meibo Brand</h2>
 
     <div class="wap">
@@ -45,11 +52,11 @@
     </div><!--img-->
     <div id="jump_1"></div><!--jump_1-->
     <div class="text">
-        <h3>Greenwood</h3>
-        <p>白やベージュを基調とした明るい外観に、木のぬくもりを<br>感じるデザインと素材を採用。<br>
+        <h3 class="bar1">Greenwood</h3>
+        <p class="p1">白やベージュを基調とした明るい外観に、木のぬくもりを<br>感じるデザインと素材を採用。<br>
         日々の暮らしに寄り添う「ちょうどいい心地よさ」を<br>
         機能と価格のバランスで実現しました。</p>
-        <div class="button-wrapper"><a href="#" class="botan">詳細はこちら</a>
+        <div class="button-wrapper"><a href="#" class="botan">詳細はこちら</a></div>
     </div><!--text-->
 </section>
 
@@ -59,12 +66,12 @@
     </div><!--img-->
     <div id="jump_2"></div><!--jump_2-->
     <div class="text">
-        <h3>Hausen</h3>
-        <p>ヨーロッパ建築の美しさと、日本の住環境に合わせた<br>
+        <h3 class="bar2">Hausen</h3>
+        <p class="p2">ヨーロッパ建築の美しさと、日本の住環境に合わせた<br>
         機能性を融合した住宅ブランド。<br>
         見た目も中身も、“ちょうどいい上質”を求める方へ。<br>
         洗練された佇まいに、暮らしやすさを宿す住まいです。</p>
-        <div class="button-wrapper"><a href="#" class="botan">詳細はこちら</a>
+        <div class="button-wrapper"><a href="#" class="botan">詳細はこちら</a></div>
     </div><!--text-->
 </section>
 
@@ -74,10 +81,10 @@
     </div><!--img-->
     <div id="jump_3"></div><!--jump_2-->
     <div class="text">
-        <h3>Noirnest</h3>
-        <p>明望不動産の最高グレードシリーズ。<br>
+        <h3 class="bar3">Noirnest</h3>
+        <p class="p3">明望不動産の最高グレードシリーズ。<br>
         黒を基調とした重厚感ある外観と、洗練されたミニマル<br>デザインが特徴。機能・素材・設計、そのすべてに<br>おいて妥協のない一邸を。</p>
-        <div class="button-wrapper"><a href="#" class="botan">詳細はこちら</a>
+        <div class="button-wrapper"><a href="#" class="botan">詳細はこちら</a></div>
     </div><!--text-->
 </section>
 
@@ -91,17 +98,18 @@
     <p>営業時間：9:30～18:30</p>
     </div><!--f_logo-->
     <ul class="retsu">
-        <li><a href="index.html">モデルハウス</a></li>                
-        <li><a href="onsen.html">イベント</a></li>
-        <li><a href="oheya.html">来場予約</a></li>
-        <li><a href="syokuji.html">お問い合わせ</a></li>
-        <li><a href="sisetu.html">アクセス</a></li>
-        <li><a href="access.html">会社概要</a></li>
+        <li><a href="modelhouse.html">モデルハウス</a></li>                
+        <li><a href="event.html">イベント</a></li>
+        <li><a href="reservation.html">来場予約</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+        <li><a href="access.html">アクセス</a></li>
+        <li><a href="company.html">会社概要</a></li>
     </ul>
 </footer>
 </main>
 </body>
-
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/ham-effect.js"></script>
 <!--ナブのチェイス-->
 <script>
 window.addEventListener("scroll", function () {

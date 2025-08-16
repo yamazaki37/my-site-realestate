@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<title>理想のトイレ 総選挙 2025｜Meibo Vision Park</title>
+<link href="css/reset.css" rel="stylesheet">
+<!--<link href="css/common.css" rel="stylesheet">-->
+<link href="css/event_sub.css" rel="stylesheet" media="screen">
+</head>
+
+<body>
+<header id="main-header">
+    <div id="header_box">
+    <p><a href="index.html"><img src="images/logo.png"></a></p>
+    <h1>株式会社明望不動産</h1>
+    <div class="triggerBg"></div>
+        <div class="trigger" href="#">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+    <nav class="hNavWrap">
+        <ul class="hNav">
+            <li><a href="modelhouse.html">モデルハウス</a></li>
+            <li><a href="event.html">イベント</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+            <li><a href="#" class="catalog">カタログ請求</a></li>
+            <li><a href="contact.html" class="reserve">来場予約</a></li>
+        </ul>
+    </nav>
+    </div><!--header_box-->
+</header>
+<div id="container">
+ <h1>🧻🧻🧻 理想のトイレ 総選挙 2025 🧻🧻🧻</h1>
+    <h2>～あなたの“座りたい”はどれだ！？～</h2>
+    <img src="images/event_5.jpg">
+
+    <p>
+      ようこそ、究極の癒やしスポットを決める戦いへ。<br>
+      これはただの総選挙ではありません。<br>
+      これは、<span class="highlight">人類とトイレの長きにわたる友情</span>に、いま一票を投じる機会です。
+    </p>
+
+    <h2>イベント概要</h2>
+    <p>
+      「ウォシュレットは譲れない！」<br>
+      「いや、森の中のトイレこそ至高！」<br>
+      「音姫？ 完全防音室にしないとムリです」<br><br>
+      そんなあなたの“こだわり”をぶつけるのがこの企画！<br>
+      未来の理想トイレ像をみんなで選び抜く、<span class="highlight">かつてない戦い</span>がいま始まります。
+    </p>
+
+    <h2>投票項目（例）</h2>
+    <ul>
+      <li>ジェット噴流ウォシュレット・プロMAX</li>
+      <li>無音＆全自動・エグゼクティブ個室</li>
+      <li>まるで森の中！？自然派ウッディ便座</li>
+      <li>AIおしゃべり付き・おもてなしトイレ</li>
+    </ul>
+
+    <h2>あなたの一票が、未来を変える</h2>
+    <p>
+      <span class="highlight">「お尻に優しい未来へ」</span><br>
+      そのキャッチコピー、今ここで本物にしませんか？<br><br>
+      理想のトイレを決めるのは、<span class="highlight">あなた</span>です。<br>
+      お尻がうなる、史上最高のトイレを選びましょう！
+    </p>
+
+    <div class="comment-section">
+  <h2>参加者の声</h2>
+  <div class="comment-box">
+    <p class="comment-name">元不動産会社勤務 Yさんのお言葉</p>
+    <p>
+      以前は横浜市の新築1Kマンションに住んでいましたが、トイレがとにかく狭くてですね――。<br>
+      ドアを閉めた瞬間、膝が壁にぶつかるレベル。<br>
+      用を足すたびに“身の引き締まる思い”をしてました。いい意味でも悪い意味でも（笑）。<br>
+      あれ以来、トイレには広さと心の余裕が必要だと痛感しています。
+    </p>
+  </div>
+</div>
+</div><!--container-->
+<footer>
+    <div class="f_logo">
+    <p><img src="images/logo.png"></p>
+    <p>株式会社明望不動産</p>
+    <p>〒355-0000 埼玉県川越市品宿4-7-4</p>
+    <p>営業時間：9:30～18:30</p>
+    </div><!--f_logo-->
+    <ul class="retsu">
+        <li><a href="modelhouse.html">モデルハウス</a></li>                
+        <li><a href="event.html">イベント</a></li>
+        <li><a href="reservation.html">来場予約</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+        <li><a href="index.html#access">アクセス</a></li>
+        <li><a href="company.html">会社概要</a></li>
+    </ul>
+</footer>
+</main>
+</body>
+
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="./js/jquery.bgswitcher.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+<script src="js/ham-effect.js"></script>
+<!--オープニングアニメーションのスクリプト-->
+<script>
+  window.addEventListener("load", () => {
+    const loading = document.querySelector("[data-opening-animation]");
+    const text = document.querySelector('[data-opening-animation="text"]');
+    const logo = document.querySelector('[data-opening-animation="logo"]');
+    const main = document.querySelector("main");
+
+    gsap.set(text, { autoAlpha: 0, y: 60 });
+    gsap.set(logo, { autoAlpha: 0 });
+
+    const tl = gsap.timeline({
+      onComplete: () => {
+        gsap.to(main, { autoAlpha: 1, duration: 0.6 });
+      }
+    });
+
+    tl.to(text, { autoAlpha: 1, y: 0, duration: 1.2, ease: "power2.out" })
+      .to(logo, { autoAlpha: 1, duration: 1, ease: "power2.out" }, "-=0.6")
+      .to(loading, { clipPath: "inset(0 0 0 100%)", duration: 1, ease: "power2.inOut" }, "+=0.4");
+  });
+</script>
+<!--ここまで-->
+
+<!--スライダー-->
+<script>
+jQuery(function($) {
+    $('.bg-slider').bgSwitcher({
+        images: ['images/bg_2.jpg','images/mainn.jpg','images/main_3.jpeg'], 
+		interval: 4000, 
+		loop: true, 	
+		effect: "fade", // エフェクトの種類をfade,blind,clip,slide,drop,hideから指定
+		duration: 2500, // エフェクトの時間を指定します。
+		easing: "swing" // エフェクトのイージングをlinear,swingから指定
+    });
+});
+</script>
+<!--ここまで-->
+
+<!--ナブのチェイス-->
+<script>
+window.addEventListener("scroll", function () {
+  const header = document.getElementById("main-header");
+  if (window.scrollY > 10) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+});
+</script>
+<!--ここまで-->
+
+</html>

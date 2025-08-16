@@ -1,6 +1,6 @@
 @charset "utf-8";
-main {
-    width: 100%;
+img {
+  border-radius: 20px;
 }
 h2{
     margin: 50px;
@@ -12,7 +12,7 @@ h3{
     font-size: 1.6rem;
 }
 .concept {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
 }
 .concept p {
@@ -38,7 +38,8 @@ figure {
   width: calc(33.333% - 13.333px);
   margin: 0;
 }
-figcaption {
+figure p {
+    margin: 10px auto;
     font-size: 1.2rem;
 }
 figure img {
@@ -49,21 +50,15 @@ figure img {
 
 figure figcaption {
   position: absolute;
-  left: -10px;
   color: #333;
-  padding: 4px 6px;
   white-space: nowrap;
-  line-height: 2;
 }
-figcaption span {
-    color:rgb(240, 0, 0);
-    border-bottom: 1px solid black;
-    padding-bottom: 5px;
+figcaption {
+    font-size: 1.4rem;
 }
 article{
     width: 90%;
     margin: 0 auto;
-   padding: 100px 0;
 }
 article p {
     width: 50%;
@@ -75,22 +70,88 @@ article p {
 article p span {
     display: inline-block;
 }
-.button-wrapper {
-  display: flex;
-  justify-content: flex-end; /* 右寄せ */
+#access {
+    width: 90%;
+    margin: 0 auto;
+    scroll-margin-top: 120px; 
+}
+.map {
+    margin: 50px auto;
+    width: 600px;
+    height: 450px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+.map iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 .botan {
+    margin-top: 20px;
     background-color: #ea6a31;  
     color: #fff;                
-    padding: 8px 16px;
+    padding: 16px 36px;
     border-radius: 4px;
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s;
     display: inline-block;
 }
+.button-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+.button_box {
+    text-align: center;
+}
 .botan:hover {
     background-color: #eb946f; 
+}
+.anim-box.poyopoyo {
+  animation: poyopoyo 2s ease-out infinite;
+  opacity: 1;
+}
+@keyframes poyopoyo {
+  0%, 40%, 60%, 80% {
+    transform: scale(1.0);
+  }
+  50%, 70% {
+    transform: scale(0.95);
+  }
+}
+.textarea, .textarea_reverse {
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.textarea_reverse {
+  flex-direction: row-reverse;
+}
+.vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 2.4rem;
+    padding-left: 50px;
+    line-height: 1.8;
+}
+.vertical-text-reverse {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 2.4rem;
+    padding-right: 50px;
+    line-height: 1.8;
+}
+.description {
+    width: 70%;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.section-divider {
+    border: none;
+    border-top: 1px solid #9dc9c4;
+    margin: 60px 0;
 }
 
 /*オープニングアニメーションCSS*/
@@ -130,3 +191,107 @@ article p span {
     z-index: 1;
 }
 /*ここまで*/
+
+@media screen and (max-width: 1024px) {
+    .bg-slider {
+     height: 50vh;
+}
+    .textarea,.textarea_reverse {
+        width: 60vw;
+    }
+    article p {
+        font-size: 1rem;
+    }
+    .vertical-text,.vertical-text-reverse {
+        font-size: 2.4rem;
+    }
+    .vertical-text {
+        padding-left: 20px;
+        line-height: 1.2;
+    }
+    .vertical-text-reverse{
+        padding-right:20px;
+        line-height: 1.2;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .concept p {
+        width: 100%;
+        font-size: 1rem;
+    }
+    .vertical-text,.vertical-text-reverse {
+        font-size: 2rem;
+    }
+    article p {
+        width: 70%;
+    }
+    .textarea,
+  .textarea_reverse {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .content_box,
+  .concept,
+  .description,
+  article p {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+  .vertical-text,
+  .vertical-text-reverse {
+    margin-top: 20px;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    writing-mode: horizontal-tb; 
+    text-orientation: initial;
+    text-align: center; 
+  }
+  .description{
+    margin:20px auto;
+  }
+  .map {
+    width: 100%;
+    height: auto;
+  }
+  .button_box {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+    .bg-slider {
+        width: 100vw;
+    }
+    .concept h2,
+    .vertical-text,
+    .vertical-text-reverse {
+        font-size: 1.2rem;
+    }
+    .concept p,
+    .description {
+        width: 100%;
+        font-size: 0.7rem;
+    }
+    figcaption, figure p {
+        font-size: 0.8rem;
+    }
+    h3 {
+        font-size: 1.2rem;
+    }
+    article p {
+        font-size: 0.8rem;
+        text-align: left;
+    }
+    .botan {
+        padding: 10px 20px;
+    }
+}

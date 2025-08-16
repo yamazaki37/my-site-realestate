@@ -1,0 +1,161 @@
+@charset "utf-8";
+main {
+    width: 100%;
+}
+h2{
+    margin: 100px;
+    text-align: center;
+    font-size: 2rem;
+    position: relative;
+    margin-bottom: 1rem;
+}
+h2:before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    display: inline-block;
+    width: 60px;
+    height: 2px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: #ea6a31;
+    border-radius: 2px;
+}
+.concept {
+    width: 80%;
+    margin: 0 auto;
+}
+.concept p {
+    padding: 50px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 2;
+}
+.content_box {
+    width:90%;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+time {
+    margin: 50px 0;
+    display: block;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border-bottom: 0.3px solid gray;
+    }
+.line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+figure {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+figcaption{
+    margin: 10px;
+}
+figcaption span {
+    display: inline-block;
+    margin: 10px auto;
+    font-weight: bold;
+}
+.ex {
+    width: 100%;
+}
+.ex_text {
+	display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.ex_text img {
+  border-radius: 20px;
+}
+.exa {
+	width:40%;
+	margin: 0 auto;
+	text-align: center;
+}
+.exa span{
+    font-size: 1.8rem;
+}
+.exa p{
+    margin-top: 20px;
+    font-size: 1.2rem;
+    line-height: 2;
+    letter-spacing: 1.4px;
+}
+.ex_text {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.ex_text.reverse {
+  flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 1024px) {
+.ex img {
+    width: 49vw;
+}
+.exa {
+    width: 45vw;
+}
+.exa p span {
+    margin: 0 auto;
+}
+figure {
+    width: 28vw;
+}
+}
+@media screen and (max-width: 768px) {
+.exa p {
+    font-size: 1.0rem;
+}
+.exa p span {
+    font-size: 1.3rem;
+}
+figcaption {
+    font-size: 0.8rem;
+}
+.concept {
+    width: 100%;
+}
+}
+@media screen and (max-width: 480px) {
+h2 {
+    font-size: 1.4rem;        
+}
+.content_box {
+    padding: 0;
+}
+.concept p {
+    font-size: 1rem;
+}
+time {
+    font-size: 1.2rem;
+    margin: 10px auto;
+}
+.ex {
+    width: 100%;
+    margin: 20px auto;
+}
+.ex img{
+    width: 80vw;
+}
+.exa {
+    width: 90vw;
+}
+.exa p {
+    margin: 10px auto;
+}
+.ex_text, .ex_text.reverse {
+    flex-direction: column;
+}
+figure {
+    width: 43vw;
+    margin: 20px 0;
+}
+}

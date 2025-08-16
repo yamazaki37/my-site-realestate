@@ -1,8 +1,8 @@
 @charset "utf-8";
 
 body{
-	font-family: "Times New Roman",Times,serif,"游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic", "メイリオ", Meiryo, sans-serif;
-	background:#f8f4f4;
+	font-family: 'Noto Serif JP', serif,Times,serif,"游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic", "メイリオ", Meiryo, sans-serif;
+	background:rgb(243, 241, 241);
 	padding-top: 105px; 
 }
 
@@ -105,8 +105,6 @@ footer p {
 .f_logo {
 	padding: 10px 0 0 0;
 }
-
-
 .loading {
   position: fixed;
   inset: 0;
@@ -117,4 +115,121 @@ footer p {
   z-index: 9999;
   clip-path: inset(0 0 0 0);
   transition: clip-path 1s ease;
+}
+
+@media screen and (max-width: 1024px) {
+    header {
+    width: 100%;
+}
+.header_box {
+    width: 35%;
+}
+.header_box h1 {
+    font-size: 1.4rem;
+}
+nav {
+	width: 30%;
+}
+nav ul {
+    display: flex;
+	flex-direction: column;
+}
+    .triggerBg {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 10;
+	background-color: rgba(120, 120, 120, 0.4);
+	display: none;
+	top: 0;
+	left: 0;
+}
+.trigger,
+.trigger span {
+	display: inline-block;
+	transition: all .2s;
+	box-sizing: border-box;
+}
+.trigger {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+    cursor: pointer;
+    width: 50px;
+	height: 44px;
+	z-index: 1000;
+}
+.trigger span {
+	width: 80%;
+	height: 1px;
+	background-color: #666;
+}
+.trigger.active span:nth-of-type(1) {
+    transform: scaleX(1.4);  
+    background-color: brown;  
+}
+.trigger.active span:nth-of-type(2) {
+        transform: scaleX(1.2);  
+        background-color: brown; 
+}
+.trigger.active span:nth-of-type(3) {
+        transform: scaleX(1.4);  
+        background-color: brown; 
+}
+.hNavWrap {
+	padding: 50px;
+	width: 150px;
+	height: 100vh;
+	transition: all 1s;
+	transform: translate(300px);
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 100;
+	background: #b1d4d0;
+}
+.hNav li {
+    margin: 30px auto;
+	color: #fff
+}
+.hNavWrap.open {
+	transform: translate(0);
+}
+.reserve,
+  .catalog {
+    background-color: transparent;
+    color: inherit; 
+    padding: 0;
+    border-radius: 0; 
+    font-weight: normal;
+    transition: none;
+}
+
+  .reserve:hover,
+  .catalog:hover {
+    background-color: transparent;
+  }
+}
+@media screen and (max-width: 480px) {
+	#main-header img {
+        width: 50%; 
+		height: auto;
+    }
+    #main-header h1 {
+        font-size: 1rem; 
+    }
+	.f_logo img {
+		width: 60%; 
+		height: auto;
+	}
+	.f_logo p {
+		font-size: 0.8rem;
+	}
+	.retsu {
+		width: 40%;
+	}
+	.retsu li {
+		font-size: 0.8rem;
+		margin: 0;
+	}
 }
